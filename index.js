@@ -11,21 +11,12 @@ const tutorials = [
   'what is JSONP?'
 ];
 function titleCase(str) {
-  // Step 1. Lowercase the string
   str = str.toLowerCase();
-  // str = "I'm a little tea pot".toLowerCase();
-  // str = "i'm a little tea pot";
-  
-  // Step 2. Split the string into an array of strings
   str = str.split(' ');
- 
   for (var i = 0; i < str.length; i++) {
     str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-
   }
-  
-  // Step 4. Return the output
-  return str.join(' '); // ["I'm", "A", "Little", "Tea", "Pot"].join(' ') => "I'm A Little Tea Pot"
+  return str.join(' ');
 }
 
 const titleCased = () => {
