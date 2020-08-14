@@ -10,23 +10,26 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
-function capitalize2(str) {
+function titleCase(str) {
+  // Step 1. Lowercase the string
   str = str.toLowerCase();
+  // str = "I'm a little tea pot".toLowerCase();
+  // str = "i'm a little tea pot";
+  
+  // Step 2. Split the string into an array of strings
+  str = str.split(' ');
+ 
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
 
-  const arrOfWords = str.split(" ");
-
-  const arrOfWordsCased = [];
-
-  for (let i = 0; i < arrOfWords.length; i++) {
-    const char = arrOfWords[i].split("");
-    char[0] = char[0].toUpperCase();
-
-    res.push(char.join(""));
   }
-  return arrOfWordsCased.join(" ");
+  
+  // Step 4. Return the output
+  return str.join(' '); // ["I'm", "A", "Little", "Tea", "Pot"].join(' ') => "I'm A Little Tea Pot"
 }
+
 const titleCased = () => {
   
-  tutorials.map(capitalize2)
+  tutorials.map(titleCase)
   return tutorials
 }
