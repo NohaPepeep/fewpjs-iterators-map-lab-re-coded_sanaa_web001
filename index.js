@@ -30,6 +30,6 @@ function titleCase(str) {
 
 const titleCased = () => {
   
-  tutorials.map(titleCase)
+  tutorials.map(titleCase,str)
   return tutorials
 }
